@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { createForm } from '@formily/core';
+import { createForm, onFormValuesChange } from '@formily/core';
 import { createSchemaField } from '@formily/react';
 import {
   Form,
@@ -81,11 +81,24 @@ export interface IPreviewWidgetProps {
 }
 
 export const PreviewWidget: React.FC<IPreviewWidgetProps> = (props) => {
-  const form = useMemo(() => createForm(), []);
+  const form = useMemo(
+    () =>
+      createForm({
+        effects() {
+          onFormValuesChange((form) => {
+            console.log(form.values);
+          });
+        },
+      }),
+    [],
+  );
   const { form: formProps, schema } = transformToSchema(props.tree);
+
   return (
-    <Form {...formProps} form={form}>
-      <SchemaField schema={schema} />
-    </Form>
+    <>
+      <Form {...formProps} form={form}>
+        <SchemaField schema={schema} />
+      </Form>
+    </>
   );
 };
