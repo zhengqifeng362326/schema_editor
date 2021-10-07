@@ -4,10 +4,17 @@
   "description": "轻量级模板，使用 TypeScript，仅包含基础的 Layout。",
   "dependencies": {
     "@alifd/next": "^1.19.4",
+    "@alifd/theme-design-pro": "0.x",
+    "@designable/core": "1.0.0-beta.17",
+    "@designable/formily-setters": "1.0.0-beta.17",
+    "@designable/formily-transformer": "1.0.0-beta.17",
+    "@designable/react": "1.0.0-beta.17",
+    "@formily/antd": "^2.0.0-rc.13",
+    "antd": "^4.16.13",
     "moment": "^2.24.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "@alifd/theme-design-pro": "0.x"
+    "universal-env": "^3.3.3"
   },
   "devDependencies": {
     "@iceworks/spec": "^1.0.0",
@@ -17,7 +24,20 @@
     "ice.js": "^2.0.0",
     "stylelint": "^13.2.0",
     "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2"
+    "@types/react-dom": "^17.0.2",
+    "@designable/react-settings-form": "1.0.0-beta.17",
+    "@formily/core": "^2.0.0-rc.12",
+    "@formily/next": "^2.0.0-rc.12",
+    "@formily/react": "^2.0.0-rc.12",
+    "@formily/reactive": "^2.0.0-rc.12",
+    "@formily/shared": "^2.0.0-rc.12"
+  },
+  "peerDependencies": {
+    "@alifd/next": "^1.23.0",
+    "@formily/next": "^2.0.0-rc.12",
+    "@formily/react": "^2.0.0-rc.12",
+    "@formily/reactive": "^2.0.0-rc.12",
+    "@formily/shared": "^2.0.0-rc.12"
   },
   "scripts": {
     "start": "icejs start",
